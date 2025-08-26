@@ -1,0 +1,26 @@
+# These are some common exclusions for Android Studio projects
+
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties # Duplicated, but harmless. Often one for project, one for app module.
+# Add other common Android specific ignores if they are not already there
+# For example:
+*.jks
+*.keystore
+app/build/
+.apk
+.aab
+.idea/
+etc.
