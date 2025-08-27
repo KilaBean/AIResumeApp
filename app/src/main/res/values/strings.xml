@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">AIResumeApp</string>
-    <string name="gemini_api_key">AIzaSyCGfRqDM4tXQI0l7LJG2I7mvbinm9CuGps</string>
+    <string name="app_name">AIResume</string>
+    <string name="gemini_api_key"></string>
 </resources>
