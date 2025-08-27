@@ -2,6 +2,17 @@
 
 An Android application designed to help users create, edit, and enhance their resumes using Artificial Intelligence. This app allows users to input their personal information, work experience, education, skills, projects, and certifications, and leverage AI capabilities to refine descriptions and generate professional summaries.
 
+
+## Screenshots
+
+|              Home Screen               |              Form Screen               | Resume Preview |
+|:--------------------------------------:|:--------------------------------------:|:--------------:|
+| ![Home Screen](images/home_screen.jpg) | ![Form Screen](images/form_screen.jpg) | ![Resume Preview](images/resume_preview.png) |
+|  Dashboard for managing your resumes.  |  Input and edit your resume details.   | Final formatted resume display. |
+
+---
+
+
 ## Features
 
 *   **Resume Creation & Management:** Create, save, edit, and delete multiple resume profiles.
