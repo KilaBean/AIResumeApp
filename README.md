@@ -5,10 +5,10 @@ An Android application designed to help users create, edit, and enhance their re
 
 ## Screenshots
 
-| Home Screen | Form Screen | Resume Preview |
-|-------------|-------------|----------------|
-| ![Home Screen](images/home_screen.jpg) | ![Form Screen](images/form_screen.jpg) | ![Resume Preview](images/resume_preview.png) |
-| Dashboard for managing your resumes. | Input and edit your resume details. | Final formatted resume display. |
+| Home Screen | Form Screen | Resume Preview                               |
+|-------------|-------------|----------------------------------------------|
+| ![Home Screen](images/home_screen.jpg) | ![Form Screen](images/form_screen.jpg) | ![Resume Preview](images/resume_preview.jpg) |
+| Dashboard for managing your resumes. | Input and edit your resume details. | Final formatted resume display.              |
 
 ---
 
