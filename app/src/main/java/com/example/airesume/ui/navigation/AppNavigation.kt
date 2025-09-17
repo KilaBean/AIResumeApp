@@ -7,29 +7,44 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.airesume.ui.screens.auth.LoginScreen
+import com.example.airesume.ui.screens.auth.SignUpScreen
 import com.example.airesume.ui.screens.form.FormScreen
 import com.example.airesume.ui.screens.home.HomeScreen
+import com.example.airesume.ui.screens.home.EditProfileScreen
 import com.example.airesume.ui.screens.preview.PreviewScreen
+import com.example.airesume.ui.screens.search.SearchScreen
+import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
-    // Keep this coroutineScope for FormScreen and PreviewScreen, as they need it for snackbars
-    // or AI operations which might be launched from a parent scope.
     val appCoroutineScope = rememberCoroutineScope()
+
+    // ✅ Check if user already logged in
+    val firebaseAuth = FirebaseAuth.getInstance()
+    val startDestination = if (firebaseAuth.currentUser != null) "home" else "login"
 
     NavHost(
         navController = navController,
-        startDestination = "home"
+        startDestination = startDestination
     ) {
-        composable("home") {
-            // HomeScreen does NOT take a coroutineScope parameter.
-            // It uses its own internal rememberCoroutineScope if it needs to launch coroutines.
-            HomeScreen(
-                navController = navController
-            )
+        // ⬇️ Login Screen
+        composable("login") {
+            LoginScreen(navController = navController)
         }
 
+        // ⬇️ Sign Up Screen
+        composable("signup") {
+            SignUpScreen(navController = navController)
+        }
+
+        // ⬇️ Home Screen
+        composable("home") {
+            HomeScreen(navController = navController)
+        }
+
+        // Form Screen
         composable(
             route = "form/{resumeId}",
             arguments = listOf(navArgument("resumeId") { type = NavType.LongType })
@@ -37,11 +52,12 @@ fun AppNavigation() {
             val resumeId = backStackEntry.arguments?.getLong("resumeId") ?: -1L
             FormScreen(
                 navController = navController,
-                coroutineScope = appCoroutineScope, // Correctly passing to FormScreen
+                coroutineScope = appCoroutineScope,
                 resumeId = resumeId
             )
         }
 
+        // Preview Screen
         composable(
             route = "preview/{resumeId}",
             arguments = listOf(navArgument("resumeId") { type = NavType.LongType })
@@ -49,9 +65,18 @@ fun AppNavigation() {
             val resumeId = backStackEntry.arguments?.getLong("resumeId") ?: -1L
             PreviewScreen(
                 navController = navController,
-                coroutineScope = appCoroutineScope, // Correctly passing to PreviewScreen
+                coroutineScope = appCoroutineScope,
                 resumeId = resumeId
             )
+        }
+
+        // Search Screen
+        composable("search") {
+            SearchScreen(navController = navController)
+        }
+
+        composable("editProfile") {
+            EditProfileScreen(navController = navController)
         }
     }
 }

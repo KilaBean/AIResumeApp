@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     kotlin("plugin.serialization") version "1.9.23"
     id("com.google.devtools.ksp") version "1.9.23-1.0.20"
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -80,6 +81,10 @@ dependencies {
 
     // JSON serialization
     implementation(libs.kotlinx.serialization.json)
+
+    // ✅ Firebase Auth
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation("com.google.firebase:firebase-auth-ktx")
 
     // Gson for JSON parsing
     implementation("com.google.code.gson:gson:2.10.1")

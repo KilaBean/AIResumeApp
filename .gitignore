@@ -1,5 +1,4 @@
 # These are some common exclusions for Android Studio projects
-
 *.iml
 .gradle
 /local.properties
@@ -23,4 +22,6 @@ app/build/
 .apk
 .aab
 .idea/
-etc.
+
+# Ignore app string resources
+app/src/main/res/values/strings.xml

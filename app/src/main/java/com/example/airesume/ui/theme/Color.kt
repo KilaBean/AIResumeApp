@@ -2,31 +2,26 @@ package com.example.airesume.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Light Theme Palette - Modern, Professional, Common
-// Primary color (e.g., a deep, professional blue/teal)
-val Purple40 = Color(0xFF006A6D)
-// Secondary color (e.g., a muted, complementary green-gray)
-val PurpleGrey40 = Color(0xFF4A6365)
-// Tertiary/Accent color (e.g., a subtle, muted purple for highlights)
-val Pink40 = Color(0xFF5E5C7F)
+// --- Blue accents ---
+val PrimaryBlue = Color(0xFF1565C0)   // primary: A deep, strong blue
+val OnPrimary = Color(0xFFFFFFFF)     // text/icons on primary: White for contrast
 
-// Dark Theme Palette - Modern, Professional, Common
-// Primary color (a lighter, more vibrant version of the light primary)
-val Purple80 = Color(0xFF4FD9E1)
-// Secondary color (a lighter, desaturated complement)
-val PurpleGrey80 = Color(0xFFB1CBD0)
-// Tertiary/Accent color (a lighter, muted purple)
-val Pink80 = Color(0xFFC0C0E4)
+val SecondaryBlue = Color(0xFF1976D2) // secondary: A slightly lighter blue
+val OnSecondary = Color(0xFFFFFFFF)   // text/icons on secondary: White
 
-// Resume specific grays - Refined for better light/dark theme contrast and Material 3 elevation
-val Gray99 = Color(0xFFFBFDFA) // Very light gray (near white) - Ideal for light theme background/on-colors
-val Gray95 = Color(0xFFF0F0F0) // Light gray - Good for light theme surface/card backgrounds
-val Gray90 = Color(0xFFE0E3E3) // Slightly darker light gray - Useful for light theme dividers, or dark theme on-colors
-val Gray80 = Color(0xFFDBE4E5) // Light blue-gray - For hints or disabled states in light theme
-val Gray70 = Color(0xFFBFC8C9) // Medium light gray - Dark theme on-surface-variant
-val Gray60 = Color(0xFF999999) // Standard medium gray
-val Gray50 = Color(0xFF808080)
-val Gray40 = Color(0xFF666666) // Darker gray - Light theme on-surface-variant
-val Gray30 = Color(0xFF4D4D4D) // Medium dark gray - Dark theme surface variant
-val Gray20 = Color(0xFF2C2C2C) // Dark gray - Dark theme surface/card backgrounds
-val Gray10 = Color(0xFF191C1C) // Very dark gray (almost black) - Ideal for dark theme background/on-colors
+val TertiaryBlue = Color(0xFF42A5F5)  // tertiary (lighter blue): A brighter, more vibrant blue
+val OnTertiary = Color(0xFF0F1721)    // dark text for contrast on light tertiary: Near-black
+
+// --- Background / neutrals ---
+val White = Color(0xFFFFFFFF)
+val Black = Color(0xFF000000) // Added Black for onBackground/onSurface if needed
+val Gray95 = Color(0xFFF5F5F5) // Very light gray, useful for subtle distinctions
+val Gray90 = Color(0xFFE0E0E0)
+val Gray80 = Color(0xFFBDBDBD)
+val Gray70 = Color(0xFF9E9E9E)
+val Gray60 = Color(0xFF757575)
+val Gray50 = Color(0xFF616161)
+val Gray40 = Color(0xFF424242)
+val Gray30 = Color(0xFF303030)
+val Gray20 = Color(0xFF212121)
+val Gray10 = Color(0xFF121212) // Very dark gray, often used as onBackground/onSurface content color

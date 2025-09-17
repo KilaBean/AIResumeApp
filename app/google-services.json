@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "786636597823",
+    "project_id": "airesume-d3945",
+    "storage_bucket": "airesume-d3945.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786636597823:android:e1ca39834295bf805a268a",
+        "android_client_info": {
+          "package_name": "com.example.airesume"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARy56fJMmGDUQDOVBAzB4IxjQDCfidbXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
